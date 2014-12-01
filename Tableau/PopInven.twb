@@ -1,0 +1,2474 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8200.14.0819.2015                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='8.3'>
+      <aliases enabled='yes' />
+      <column caption='Acquisition_Cost Parameter' datatype='real' name='[Acquisition_Cost Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.0'>
+        <calculation class='tableau' formula='0.0' />
+        <range max='5340000.0' min='0.0' />
+      </column>
+    </datasource>
+    <datasource caption='SEX+ (C##CS347_HNP248)' inline='true' name='oracle.41911.969445613424' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='' schema='C##CS347_HNP248' server='128.83.138.158' service='orcl' username='C##CS347_hnp248'>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[SEX].[SEX_ID]'>
+              </expression>
+              <expression op='[POPULATION].[SEX_ID]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation name='SEX' table='[C##CS347_HNP248].[SEX]' type='table' />
+          <relation name='POPULATION' table='[C##CS347_HNP248].[POPULATION]' type='table' />
+        </relation>
+        <cols>
+          <map key='[AGE]' value='[POPULATION].[AGE]' />
+          <map key='[CENSUS2010POP]' value='[POPULATION].[CENSUS2010POP]' />
+          <map key='[DIVISION_ID]' value='[POPULATION].[DIVISION_ID]' />
+          <map key='[ESTIMATESBASE2010]' value='[POPULATION].[ESTIMATESBASE2010]' />
+          <map key='[ORIGIN_ID]' value='[POPULATION].[ORIGIN_ID]' />
+          <map key='[POPESTIMATE2010]' value='[POPULATION].[POPESTIMATE2010]' />
+          <map key='[POPESTIMATE2011]' value='[POPULATION].[POPESTIMATE2011]' />
+          <map key='[POPESTIMATE2012]' value='[POPULATION].[POPESTIMATE2012]' />
+          <map key='[POPESTIMATE2013]' value='[POPULATION].[POPESTIMATE2013]' />
+          <map key='[RACE_ID]' value='[POPULATION].[RACE_ID]' />
+          <map key='[REGION_ID]' value='[POPULATION].[REGION_ID]' />
+          <map key='[SEX_ID (POPULATION)]' value='[POPULATION].[SEX_ID]' />
+          <map key='[SEX_ID]' value='[SEX].[SEX_ID]' />
+          <map key='[SEX_NAME]' value='[SEX].[SEX_NAME]' />
+          <map key='[STATE_ID]' value='[POPULATION].[STATE_ID]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>SEX_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SEX_ID]</local-name>
+            <parent-name>[SEX]</parent-name>
+            <remote-alias>SEX_ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SEX_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SEX_NAME]</local-name>
+            <parent-name>[SEX]</parent-name>
+            <remote-alias>SEX_NAME</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REGION_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REGION_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>REGION_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DIVISION_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DIVISION_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>DIVISION_ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>STATE_ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SEX_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SEX_ID (POPULATION)]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>SEX_ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ORIGIN_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ORIGIN_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>ORIGIN_ID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RACE_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RACE_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>RACE_ID</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AGE]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>AGE</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CENSUS2010POP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CENSUS2010POP]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>CENSUS2010POP</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ESTIMATESBASE2010</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ESTIMATESBASE2010]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>ESTIMATESBASE2010</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2010</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2010]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2010</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2011</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2011]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2011</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2012</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2012]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2012</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2013</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2013]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2013</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='TRANSACTIONS (C##CS347_JSM3287) (2)' inline='true' name='oracle.41918.013159236114' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='' schema='C##CS347_JSM3287' server='128.83.138.158' service='orcl' username='C##CS347_jsm3287'>
+        <relation name='TRANSACTIONS' table='[C##CS347_JSM3287].[TRANSACTIONS]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTY]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>COUNTY</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>25</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NSN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NSN]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>NSN</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>25</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>QUANTITY</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[QUANTITY]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>QUANTITY</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHIP_DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[SHIP_DATE]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>SHIP_DATE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_DAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='INVENTORY+ (C##CS347_JSM3287)' inline='true' name='oracle.41911.937503275461' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='' schema='C##CS347_JSM3287' server='128.83.138.158' service='orcl' username='C##CS347_jsm3287'>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[INVENTORY].[NSN]'>
+              </expression>
+              <expression op='[TRANSACTIONS].[NSN]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation name='INVENTORY' table='[C##CS347_JSM3287].[INVENTORY]' type='table' />
+          <relation name='TRANSACTIONS' table='[C##CS347_JSM3287].[TRANSACTIONS]' type='table' />
+        </relation>
+        <cols>
+          <map key='[Acquisition_Cost]' value='[INVENTORY].[Acquisition_Cost]' />
+          <map key='[COUNTY]' value='[TRANSACTIONS].[COUNTY]' />
+          <map key='[FEDERAL_SUPPLY_CATEGORY]' value='[INVENTORY].[FEDERAL_SUPPLY_CATEGORY]' />
+          <map key='[FEDERAL_SUPPLY_CATEGORY_NAME]' value='[INVENTORY].[FEDERAL_SUPPLY_CATEGORY_NAME]' />
+          <map key='[FEDERAL_SUPPLY_CLASS]' value='[INVENTORY].[FEDERAL_SUPPLY_CLASS]' />
+          <map key='[FEDERAL_SUPPLY_CLASS_NAME]' value='[INVENTORY].[FEDERAL_SUPPLY_CLASS_NAME]' />
+          <map key='[FIPS]' value='[INVENTORY].[FIPS]' />
+          <map key='[ID]' value='[TRANSACTIONS].[ID]' />
+          <map key='[Item_Name]' value='[INVENTORY].[Item_Name]' />
+          <map key='[NSN (TRANSACTIONS)]' value='[TRANSACTIONS].[NSN]' />
+          <map key='[NSN]' value='[INVENTORY].[NSN]' />
+          <map key='[QUANTITY]' value='[TRANSACTIONS].[QUANTITY]' />
+          <map key='[SHIP_DATE]' value='[TRANSACTIONS].[SHIP_DATE]' />
+          <map key='[STATE]' value='[TRANSACTIONS].[STATE]' />
+          <map key='[UI]' value='[INVENTORY].[UI]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>NSN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NSN]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>NSN</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>25</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Item_Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Item_Name]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>Item_Name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>80</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UI</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[UI]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>UI</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>11</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Acquisition_Cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Acquisition_Cost]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>Acquisition_Cost</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>126</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FIPS</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[FIPS]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>FIPS</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEDERAL_SUPPLY_CATEGORY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FEDERAL_SUPPLY_CATEGORY]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>FEDERAL_SUPPLY_CATEGORY</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEDERAL_SUPPLY_CATEGORY_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FEDERAL_SUPPLY_CATEGORY_NAME]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>FEDERAL_SUPPLY_CATEGORY_NAME</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>60</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEDERAL_SUPPLY_CLASS</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[FEDERAL_SUPPLY_CLASS]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>FEDERAL_SUPPLY_CLASS</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEDERAL_SUPPLY_CLASS_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FEDERAL_SUPPLY_CLASS_NAME]</local-name>
+            <parent-name>[INVENTORY]</parent-name>
+            <remote-alias>FEDERAL_SUPPLY_CLASS_NAME</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>120</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTY]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>COUNTY</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>25</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NSN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NSN (TRANSACTIONS)]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>NSN</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>25</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>QUANTITY</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[QUANTITY]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>QUANTITY</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHIP_DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[SHIP_DATE]</local-name>
+            <parent-name>[TRANSACTIONS]</parent-name>
+            <remote-alias>SHIP_DATE</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_DAT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='POPULATION (C##CS347_HNP248)' inline='true' name='oracle.41911.945151504631' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='' schema='C##CS347_HNP248' server='128.83.138.158' service='orcl' username='C##CS347_hnp248'>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[POPULATION].[STATE_ID]'>
+              </expression>
+              <expression op='[STATE].[STATE_ID]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation name='POPULATION' table='[C##CS347_HNP248].[POPULATION]' type='table' />
+          <relation name='STATE' table='[C##CS347_HNP248].[STATE]' type='table' />
+        </relation>
+        <cols>
+          <map key='[AGE]' value='[POPULATION].[AGE]' />
+          <map key='[CENSUS2010POP]' value='[POPULATION].[CENSUS2010POP]' />
+          <map key='[DIVISION_ID]' value='[POPULATION].[DIVISION_ID]' />
+          <map key='[ESTIMATESBASE2010]' value='[POPULATION].[ESTIMATESBASE2010]' />
+          <map key='[ORIGIN_ID]' value='[POPULATION].[ORIGIN_ID]' />
+          <map key='[POPESTIMATE2010]' value='[POPULATION].[POPESTIMATE2010]' />
+          <map key='[POPESTIMATE2011]' value='[POPULATION].[POPESTIMATE2011]' />
+          <map key='[POPESTIMATE2012]' value='[POPULATION].[POPESTIMATE2012]' />
+          <map key='[POPESTIMATE2013]' value='[POPULATION].[POPESTIMATE2013]' />
+          <map key='[RACE_ID]' value='[POPULATION].[RACE_ID]' />
+          <map key='[REGION_ID]' value='[POPULATION].[REGION_ID]' />
+          <map key='[SEX_ID]' value='[POPULATION].[SEX_ID]' />
+          <map key='[STATE_ID (STATE)]' value='[STATE].[STATE_ID]' />
+          <map key='[STATE_ID]' value='[POPULATION].[STATE_ID]' />
+          <map key='[STATE_NAME]' value='[STATE].[STATE_NAME]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>REGION_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REGION_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>REGION_ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DIVISION_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DIVISION_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>DIVISION_ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>STATE_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SEX_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SEX_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>SEX_ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ORIGIN_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ORIGIN_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>ORIGIN_ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RACE_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RACE_ID]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>RACE_ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AGE]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>AGE</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CENSUS2010POP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CENSUS2010POP]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>CENSUS2010POP</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ESTIMATESBASE2010</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ESTIMATESBASE2010]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>ESTIMATESBASE2010</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2010</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2010]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2010</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2011</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2011]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2011</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2012</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2012]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2012</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPESTIMATE2013</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POPESTIMATE2013]</local-name>
+            <parent-name>[POPULATION]</parent-name>
+            <remote-alias>POPESTIMATE2013</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE_ID (STATE)]</local-name>
+            <parent-name>[STATE]</parent-name>
+            <remote-alias>STATE_ID</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE_NAME]</local-name>
+            <parent-name>[STATE]</parent-name>
+            <remote-alias>STATE_NAME</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column aggregation='CountD' datatype='integer' datatype-customized='true' name='[CENSUS2010POP]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[STATE_NAME]' role='dimension' type='nominal'>
+      </column>
+      <column-instance column='[STATE_NAME]' derivation='None' name='[none:STATE_NAME:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:STATE_NAME:nk]' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;LA&quot;</bucket>
+            </map>
+            <map to='#17becf'>
+              <bucket>&quot;PA&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;AK&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;MD&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;SC&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;CA&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;MO&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;UT&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;IL&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;NY&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;GA&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;NH&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;WY&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;DE&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;ND&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;WI&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;CO&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;MS&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;VA&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;MA&quot;</bucket>
+            </map>
+            <map to='#9edae5'>
+              <bucket>&quot;RI&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;AL&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;ME&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;SD&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;KS&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;OK&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;HI&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;NJ&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;FL&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;NE&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;WV&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;IN&quot;</bucket>
+            </map>
+            <map to='#c7c7c7'>
+              <bucket>&quot;OH&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;CT&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;MT&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;VT&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;KY&quot;</bucket>
+            </map>
+            <map to='#dbdb8d'>
+              <bucket>&quot;OR&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;IA&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;NM&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;ID&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;NV&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;AR&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;MI&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;TN&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;DC&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;NC&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;WA&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;AZ&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;MN&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;TX&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='VOTING (C##CS347_WT3522)' inline='true' name='oracle.41921.665320810185' version='8.3'>
+      <connection authentication='RDBMS' class='oracle' port='' schema='C##CS347_WT3522' server='128.83.138.158' service='orcl' username='C##CS347_wt3522'>
+        <relation name='VOTING' table='[C##CS347_WT3522].[VOTING]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RACE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RACE]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>RACE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>29</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_POPULATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TOTAL_POPULATION]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>TOTAL_POPULATION</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>9</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_CITIZEN_POPULATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TOTAL_CITIZEN_POPULATION]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>TOTAL_CITIZEN_POPULATION</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>9</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_REGISTERED</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TOTAL_REGISTERED]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>TOTAL_REGISTERED</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>9</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERCENT_REGISTERED_TOTAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PERCENT_REGISTERED_TOTAL]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>PERCENT_REGISTERED_TOTAL</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARGIN_OF_ERROR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MARGIN_OF_ERROR]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>MARGIN_OF_ERROR</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERCENT_REGISTERED_CITIZEN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PERCENT_REGISTERED_CITIZEN]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>PERCENT_REGISTERED_CITIZEN</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARGIN_OF_ERROR2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MARGIN_OF_ERROR2]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>MARGIN_OF_ERROR2</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL_VOTED</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TOTAL_VOTED]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>TOTAL_VOTED</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>9</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERCENT_VOTED_TOTAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PERCENT_VOTED_TOTAL]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>PERCENT_VOTED_TOTAL</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARGIN_OF_ERROR3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MARGIN_OF_ERROR3]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>MARGIN_OF_ERROR3</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERCENT_VOTED_CITIZEN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PERCENT_VOTED_CITIZEN]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>PERCENT_VOTED_CITIZEN</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARGIN_OF_ERROR4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MARGIN_OF_ERROR4]</local-name>
+            <parent-name>[VOTING]</parent-name>
+            <remote-alias>MARGIN_OF_ERROR4</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=178,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Voting Percentage' datatype='real' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([TOTAL_VOTED]) / ABS(LOOKUP(ZN(SUM([TOTAL_POPULATION])), 0))' scope-isolation='false'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='CountD' datatype='real' datatype-customized='true' name='[PERCENT_VOTED_TOTAL]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='CountD' datatype='integer' datatype-customized='true' name='[TOTAL_POPULATION]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='CountD' datatype='integer' datatype-customized='true' name='[TOTAL_VOTED]' role='measure' type='quantitative'>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='oracle.41911.937503275461'>
+      <column datatype='string' name='[STATE]' role='dimension' type='nominal'>
+      </column>
+      <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='oracle.41911.945151504631'>
+      <column datatype='string' name='[STATE_NAME]' role='dimension' type='nominal'>
+      </column>
+      <column-instance column='[STATE_NAME]' derivation='None' name='[none:STATE_NAME:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='oracle.41918.013159236114'>
+      <column datatype='string' name='[STATE]' role='dimension' type='nominal'>
+      </column>
+      <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='oracle.41911.937503275461' target='oracle.41911.945151504631'>
+      <column-mapping>
+        <map key='[oracle.41911.937503275461].[none:STATE:nk]' value='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+    <datasource-relationship source='oracle.41911.945151504631' target='oracle.41918.013159236114'>
+      <column-mapping>
+        <map key='[oracle.41911.945151504631].[none:STATE_NAME:nk]' value='[oracle.41918.013159236114].[none:STATE:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Pop vs Acq_Cost vs TransQuan'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='INVENTORY+ (C##CS347_JSM3287)' name='oracle.41911.937503275461' />
+            <datasource caption='POPULATION (C##CS347_HNP248)' name='oracle.41911.945151504631' />
+            <datasource caption='VOTING (C##CS347_WT3522)' name='oracle.41921.665320810185' />
+          </datasources>
+          <datasource-dependencies datasource='oracle.41911.937503275461'>
+            <column datatype='real' name='[Acquisition_Cost]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[QUANTITY]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='string' name='[STATE]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Acquisition_Cost]' derivation='Sum' name='[sum:Acquisition_Cost:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[QUANTITY]' derivation='Sum' name='[sum:QUANTITY:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='oracle.41911.945151504631'>
+            <column aggregation='CountD' datatype='integer' datatype-customized='true' name='[CENSUS2010POP]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='string' name='[ORIGIN_ID]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[SEX_ID]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[STATE_NAME]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[ORIGIN_ID]' derivation='None' name='[none:ORIGIN_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SEX_ID]' derivation='None' name='[none:SEX_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[STATE_NAME]' derivation='None' name='[none:STATE_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CENSUS2010POP]' derivation='Sum' name='[sum:CENSUS2010POP:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='oracle.41921.665320810185'>
+            <column caption='Voting Percentage' datatype='real' name='[Calculation1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([TOTAL_VOTED]) / ABS(LOOKUP(ZN(SUM([TOTAL_POPULATION])), 0))' scope-isolation='false'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[RACE]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[RACE]' derivation='None' name='[none:RACE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation1]' derivation='User' name='[usr:Calculation1:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[oracle.41911.937503275461].[sum:Acquisition_Cost:qk]' included-values='in-range'>
+            <min>520988.38</min>
+            <max>116886835.66</max>
+          </filter>
+          <filter class='quantitative' column='[oracle.41911.937503275461].[sum:QUANTITY:qk]' included-values='in-range'>
+            <min>18</min>
+            <max>653213</max>
+          </filter>
+          <filter class='categorical' column='[oracle.41911.945151504631].[none:ORIGIN_ID:nk]'>
+            <groupfilter function='member' level='[none:ORIGIN_ID:nk]' member='&quot;0&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[oracle.41911.945151504631].[none:SEX_ID:nk]'>
+            <groupfilter function='member' level='[none:SEX_ID:nk]' member='&quot;0&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[oracle.41921.665320810185].[none:RACE:nk]'>
+            <groupfilter function='member' level='[none:RACE:nk]' member='&quot;Total&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[oracle.41911.945151504631].[none:SEX_ID:nk]</column>
+            <column>[oracle.41911.945151504631].[none:ORIGIN_ID:nk]</column>
+            <column>[oracle.41911.937503275461].[sum:Acquisition_Cost:qk]</column>
+            <column>[oracle.41911.937503275461].[sum:QUANTITY:qk]</column>
+            <column>[oracle.41921.665320810185].[none:RACE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[oracle.41911.945151504631].[sum:CENSUS2010POP:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#cacaca</color>
+                <color>#aebfb4</color>
+                <color>#94b5a0</color>
+                <color>#7caa8d</color>
+                <color>#66a07b</color>
+                <color>#51966b</color>
+                <color>#3f8b5b</color>
+                <color>#2f814d</color>
+                <color>#207640</color>
+                <color>#136c34</color>
+                <color>#09622a</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+          </pane>
+          <pane id='3' y-axis-name='[oracle.41911.945151504631].[sum:CENSUS2010POP:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+          </pane>
+          <pane id='4' y-axis-name='[oracle.41911.937503275461].[sum:Acquisition_Cost:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+          </pane>
+          <pane id='6' y-axis-name='[oracle.41921.665320810185].[usr:Calculation1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([oracle.41911.945151504631].[sum:CENSUS2010POP:qk] + ([oracle.41911.937503275461].[sum:Acquisition_Cost:qk] + [oracle.41921.665320810185].[usr:Calculation1:qk]))</rows>
+        <cols>[oracle.41911.937503275461].[none:STATE:nk]</cols>
+        <join-lod-include-overrides>
+          <column>[oracle.41911.945151504631].[STATE_NAME]</column>
+        </join-lod-include-overrides>
+      </table>
+    </worksheet>
+    <worksheet name='PopAndTransQuan'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='POPULATION (C##CS347_HNP248)' name='oracle.41911.945151504631' />
+            <datasource caption='SEX+ (C##CS347_HNP248)' name='oracle.41911.969445613424' />
+            <datasource caption='TRANSACTIONS (C##CS347_JSM3287) (2)' name='oracle.41918.013159236114' />
+          </datasources>
+          <datasource-dependencies datasource='oracle.41911.945151504631'>
+            <column aggregation='CountD' datatype='integer' datatype-customized='true' name='[CENSUS2010POP]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='string' name='[ORIGIN_ID]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[SEX_ID]' role='dimension' type='nominal'>
+            </column>
+            <column datatype='string' name='[STATE_NAME]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[ORIGIN_ID]' derivation='None' name='[none:ORIGIN_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SEX_ID]' derivation='None' name='[none:SEX_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[STATE_NAME]' derivation='None' name='[none:STATE_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[CENSUS2010POP]' derivation='Sum' name='[sum:CENSUS2010POP:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='oracle.41911.969445613424'>
+            <column datatype='string' name='[SEX_ID]' role='dimension' type='nominal'>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='oracle.41918.013159236114'>
+            <column datatype='integer' name='[QUANTITY]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[QUANTITY]' derivation='Sum' name='[sum:QUANTITY:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[oracle.41911.945151504631].[none:ORIGIN_ID:nk]'>
+            <groupfilter function='member' level='[none:ORIGIN_ID:nk]' member='&quot;0&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[oracle.41911.945151504631].[none:SEX_ID:nk]'>
+            <groupfilter function='member' level='[none:SEX_ID:nk]' member='&quot;0&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[oracle.41911.945151504631].[none:STATE_NAME:nk]'>
+            <groupfilter function='level-members' level='[none:STATE_NAME:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[oracle.41911.945151504631].[none:STATE_NAME:nk]</column>
+            <column>[oracle.41911.945151504631].[none:SEX_ID:nk]</column>
+            <column>[oracle.41911.945151504631].[none:ORIGIN_ID:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane id='4'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' y-axis-name='[oracle.41918.013159236114].[sum:QUANTITY:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' y-axis-name='[oracle.41911.945151504631].[sum:CENSUS2010POP:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[oracle.41911.945151504631].[none:STATE_NAME:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([oracle.41911.945151504631].[sum:CENSUS2010POP:qk] + [oracle.41918.013159236114].[sum:QUANTITY:qk])</rows>
+        <cols>[oracle.41911.945151504631].[none:STATE_NAME:nk]</cols>
+        <join-lod-include-overrides>
+          <column>[oracle.41911.969445613424].[SEX_ID]</column>
+        </join-lod-include-overrides>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='VOTING (C##CS347_WT3522)' name='oracle.41921.665320810185' />
+          </datasources>
+          <datasource-dependencies datasource='oracle.41921.665320810185'>
+            <column aggregation='CountD' datatype='real' datatype-customized='true' name='[PERCENT_VOTED_TOTAL]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='string' name='[STATE]' role='dimension' type='nominal'>
+            </column>
+            <column aggregation='CountD' datatype='integer' datatype-customized='true' name='[TOTAL_VOTED]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PERCENT_VOTED_TOTAL]' derivation='Sum' name='[sum:PERCENT_VOTED_TOTAL:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TOTAL_VOTED]' derivation='Sum' name='[sum:TOTAL_VOTED:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[oracle.41921.665320810185].[none:STATE:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='&quot;AK&quot;' function='range' level='[none:STATE:nk]' to='&quot;AZ&quot;' />
+              <groupfilter from='&quot;CA&quot;' function='range' level='[none:STATE:nk]' to='&quot;WY&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[oracle.41921.665320810185].[none:STATE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' y-axis-name='[oracle.41921.665320810185].[sum:TOTAL_VOTED:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' y-axis-name='[oracle.41921.665320810185].[sum:PERCENT_VOTED_TOTAL:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([oracle.41921.665320810185].[sum:TOTAL_VOTED:qk] + [oracle.41921.665320810185].[sum:PERCENT_VOTED_TOTAL:qk])</rows>
+        <cols>[oracle.41921.665320810185].[none:STATE:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Pop vs Acq_Cost vs TransQuan'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='3' param='[oracle.41911.945151504631].[none:STATE_NAME:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[oracle.41911.937503275461].[sum:Acquisition_Cost:qk]' show-null-ctrls='false' type='filter' />
+            <card param='[oracle.41911.937503275461].[sum:QUANTITY:qk]' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[oracle.41911.929108969911].[none:State:nk]</field>
+          <field>[oracle.41911.937503275461].[none:STATE:nk]</field>
+          <field>[oracle.41911.937503275461].[none:State:nk]</field>
+          <field>[oracle.41911.945151504631].[none:CENSUS2010POP:nk]</field>
+          <field>[oracle.41911.945151504631].[none:ORIGIN_ID:nk]</field>
+          <field>[oracle.41911.945151504631].[none:SEX_ID:nk]</field>
+          <field>[oracle.41911.945151504631].[none:STATE_NAME:nk]</field>
+          <field>[oracle.41921.665320810185].[none:PERCENT_VOTED_TOTAL:nk]</field>
+          <field>[oracle.41921.665320810185].[none:RACE:nk]</field>
+          <field>[oracle.41921.665320810185].[none:STATE:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='PopAndTransQuan'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='5' param='[oracle.41911.945151504631].[none:STATE_NAME:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[oracle.41911.945151504631].[none:ORIGIN_ID:nk]</field>
+          <field>[oracle.41911.945151504631].[none:SEX_ID:nk]</field>
+          <field>[oracle.41911.945151504631].[none:STATE_NAME:nk]</field>
+          <field>[oracle.41911.969445613424].[none:SEX_NAME:nk]</field>
+          <field>[oracle.41918.013159236114].[none:STATE:nk]</field>
+        </color-one-way>
+      </highlight>
+      <viewpoint>
+      </viewpoint>
+    </window>
+    <window auto-hidden='0' class='dashboard' maximized='0' name='Dashboard 1'>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[oracle.41921.665320810185].[none:STATE:nk]</field>
+          <field>[oracle.41921.665320810185].[none:TOTAL_POPULATION:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Pop vs Acq_Cost vs TransQuan' width='192'>
+      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
+      D/4/poH4bncKdWwAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='PopAndTransQuan' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAARfElEQVR4nO3d23Nb13XH8S+AgwtxJUQCJCXwfrFIyrYcy7o4Vl0nTdJJpjNtJp5JPZM6
+      7bQv6UuTvrST57T/gfPUqZNxkk7jTOwkrSwnleRIDiM6MCneCZLgnQQJQgBBAgRA4KAPsCmL
+      gkyQAW1hzvo8WCYgLhzN4Ie9z8FeZ+vy+XweITRK/2kfgBCfJgmA0DQJgNA0CYDQNAmA0DQJ
+      gNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQ
+      NAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJ
+      gNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQ
+      NAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJ
+      gNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQ
+      NAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJgNA0CYDQNAmA0DQJ
+      gNA0CYDQNAmA0DQJgNA05dM+ACGOYj44TZXNTngjQmNLO8mtGBZFx/LaBi6nk814nLbObqpM
+      esLrYQyKAbfLxtrdJIqaxGKv5m4sLgEQFSgb5803r/D1v/t7ZoLv0ewx8+qPr/PP3/4HZvr6
+      8ZoNGE61YlAKE5yf/+g/wNvF53q8XA9EqTNE2Umo3FWsMgUSlUfNK7SedBJcCgPwh4ExLp6p
+      YyCw+tG/xe5uFoDmnie5uzzL2FyIOt0Wq2k7seQOrZ4qdPl8Pv8p/BuEOHbLC0FiW2k6u7sx
+      PeSjXgIgyiqzs83s0jpWfQqXrwen+eDf2YrHsTmdJU9HMpkMb7/9Ng0NDeRyOWw2G729vUQi
+      EfR6PYoOLM5qjHrdgbXkHECU1W9++TN27E24s8ssvhfgS198gUn/uzhPPYYtF2VmPQWRCRLV
+      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
+      rx/eT2KKAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAAfhklEQVR4nO2deZQkV3Wnv8jIfc/Kytq3rq2r91VqSa1WSy0jicFmlbENDAyWj2GG8Rl7
+      fASeGc5Y44FjPNhn8B8YLB0BBmw8GNEChIQQaFerF3Wrt6qu6upau/Y194xcImP+KCmzQtUr
+      qqqsynzfOTrquBUZcfNF/PK9eHHfvZKmaRoCQYliKLQDAkEhEQIQlDRCAIKSxlhoBwSlzezl
+      Xk73j1Hhr+TihfPsvfMgg+dP0tTSyomTZ6hwO8h6y9iycQsBr2PZzy96AEFBcfjKcVtNqAYT
+      9bW1lNszzAVDOMoD1NbW4nOYwSBjlFfmVhU9gKCgZFUVg9FKbU0lGY+NTNrAfR/8XaLhBI2N
+      DZi0JInJOZRkCly2ZT+/JKZBBaVMrgdQFIVMJnNTH1ZVFQBZlpfXK4FglXhXPUAymUSSJMxm
+      83L6JBCsGuIhWFDSCAEISpo1Pwv0lWe6GZqN5bbvbC3n47c1FtAjQTGx5gXw2qUZzo2Gctse
+      m6mA3giKDTEEEpQ0QgCCkuaaQyBNTXPuzZN4K6roGxjF7zJS0byNy92d7L7tltXyUSBYMa4p
+      ACUyycDwNGXBGezuOs5dHqQxojA4PMOmndtIJxI4HMsfoCQQrBbXHAKZ7D78HguuQC2zszM0
+      1TQgqSlaO9qwWq3Y7fbV8lMgWBGu2QMYzQ7uvPc+AHbuWPp3dUVcEghWD/EQLChphAAEJY0Q
+      gKCkEQIQlDRCAIKSRghAUNIIAQhKGiEAQUkjBCAoaa4tAE1DURJkVJVEQiGdTpHVNNKpNCKV
+      hKAYuGYoRCYZ5vATT7F3eytnemfIqvO0bdnPmaOv8fE//MRq+SgQrBjX7gEMRvbt3ExP32Uq
+      KivRbAGmLp3AVVZFUlGIx+Or5KZAsDJcsweQjVZU2cqh9/42w/1DbNncQjaVRjabsFutpCVp
+      tfwUCFaEawpAMsi0dWwCoGPTxlVxSCBYTcQskKCk0fUAajrBqZNvkpYs7N69C6tJ6ENQ3Oju
+      8PmxUcqbNrGx1svYVOhqnxEIigadABxlZUwN9tB7eQavZ/lTUQsEaw2dAGLzQaSMTH1LNaGg
+      mOIUFD86AUiSyujkGD0XBrDYRMZnQfGjewjOqip2rw+nzYHTLgQgKH50ArA4vOzeU4fPaRVF
+      LwQlgV4AFpkTbxxH0jR27DuA3yl6AUFxoxNAJp3GaLZh0lJkMgtZf7qOv0TW7qG3bxy7OUnT
+      lv10HT/C7zz4gYI4LBAsJ7qHYNliw6gmqWzqIOCxko7PcupsN8P9/VRVVTGbMTPa9TopzYQi
+      guEERYB+CGR309hYx/nzp/H778Fr9/Ohj3yIhGqgt3eAW7dtIRuP0mR3Y7NaMRVpMNypoXle
+      6Z3ObZtkA//pntYCeiRYKXQCSCkxJIuH+x64j5HBYdwbGnH4KnAA5eXlSz58czUl1w8nh+b5
+      v7/qzW3bzbIQQJGiGwJZ7G5qqwMYJIng/LxY9SUoeq4Y7RadHcdeViVCRQVFj24IlIwFOXOu
+      m1QySfO2PRTnCF8gyKP7kTdbnVRXlpNRwSlCIQQlgE4AKSXC8Mgk4biCzbzmC0gKBO8a/SxQ
+      IsWmXXtwyioZVcUki6cAQXGju8OV6DzHjx7l1JkuUqqYAxIUPzoBuMoCWGSNtKpiMYohkKD4
+      0fcAkSDVzVtorXEzORctlE8Cwaqh+5m3l1WidHURM7nZ2ehCTcc5cfQEtY31dF+8jM8pUdW2
+      m8Hzp7n94J2F8lkgWDZ0PUBocoSpkEI2GSOWTCOb7NQEnHSePYPH46VnMsjA2WMMjUyTEMFw
+      giLgHcFwHnbtqafMacVgMKCm4kwHkzS3b2JwaIL2xg0QnWPT1o1YizgYTlA66AQgG2VGh4bI
+      BPyUBcqxmO3sue0OANrbO5Z8WNQJFqx3dEMgm9tLbGaYV18/hpLOFsongWDV0AnAYDRjtdrw
+      O81EYqlC+SQQrBpLJvt3336AZDKN1WophD8lS1rN0jetn3qu89pxWsX7mJVkSet2n3mDgdE5
+      br3rbspd1kL4VJLMRlM88LVXdLbHP7WXezdVFsij0mBJsE8kEsXldmOUxQyPoPhZIgCHw46i
+      KGSzIhZIUPwsGQK5PV5Gx6cIxVOUOcUQSHB9psIKX/r5BZ3tTw610lbpKpBHN45eAJqGbDTh
+      8FVS7XMWyCXBeiOazPDTM2M62x/c2kDbOnh80QkgPDnMxNQEc+EkM8EYdYG1r2BBaZJMq7zS
+      O6Oz7aj3EnDd3OylTgA2l5tQDHZtbsRht5DNJDl/rpPq+joGBkYo99rw1bQwNTxAm6gZJigg
+      oUSaP/ruGzrbY5/cy3s231y3oxOAyeHjnrv357azapqacjdvHj+Cw1fP6+c6aZ4Jc7FnkLrm
+      JjKKgs0mCmkI1i/XfMuiJqO8eOwsu7a1cObCKOVlVcRmx6htasJkMiFrpTVTFE9lSGbyISKy
+      JOG2mQrokeDdck0BmOw+HnzwwwC0bNyx5O/JEosG/etnuvne60O57Y4qF7/407sK6JHg3SJW
+      vQtKGiEAQUkjIq1KnO++PsjwXH5l39YaDx/cVVs4h1YZIYAS56kz4xwfnMttf2BnTUkJQAyB
+      BCWN6AEEK8Z0JMnJoTmd7WB7BTbz2inAKASwxumZiPBXT3XqbH/zke3U+ewF8ujG6RoL8dnv
+      n9LZXvvCPVy4FOHbRwZyNoMk8b2H9q22e4AQwJonrKR57dKszhZPre90BOMhRfedDAV8nbRu
+      BXDrl39FMJ7Obf/X+9r57MGWAnpUXPzFE2eZX9S+79tWxft3Ft/D8ZoRwN88082rl/LRfTvq
+      PHzpQ9uuun8qkyWl5sMSVLGAZ1l58eI0EyElt91eWZzh8dcUgJZVee7Zp+loa+TY2WEsxjgt
+      Ww5w7ugrfOTjH73mgTNqlvQ7bkqb6eoPP0Nzcc6NhnLbLrEYXLAKXPMukwwyAb+XRCRCTU0N
+      w9NTjPccRba6SSoK6UQCh8Nxxc/+vzcu8z8On9fZBr/yvuXzXHBTfOPFPl6+mC/92lbp5K8+
+      sLWAHq0NrvszW9vQgsvtInqhj/27t5NV4hitDuxWK+kSC4ZbD3zntQG+9dpgbtvvMHP4c/u5
+      NBXh9f78g2cys74fpJeL6wqgoqoGgD17dq64M4J3TzCR1oU2JNb5jNFKU1QD7Vgyw0f/8XWd
+      7fMPdHCwPVAQfz7zvZOMzOdvxg/srOWP72ouiC/rgdH5BJOR/IN3hcuy4u87ikoAWU2jcyys
+      s4US6avsvfJcmorQNx3Lbe/b4C+YL+uBf3p9kEdf7s9tf3p/E3/5O1tW9JxFJYBS4uWL03z9
+      hUs623cfurVA3qxfVl0A33ixj38+ll9VVeO18cPP3L7abqx7ZqJJjg3o42zEq5CbZ9UFEEqk
+      GJlP5LbFPJKgkIghkOCGyWoap4bmdbam8iu/B1prPH9hkq8+26OzHf7cfiGAQrDnS8+RXpRd
+      4i/e28GhjrWfRk3Najz4Tf0s2/95cDt7G30F8ujGCSlpLkxEdLaspt2YAOIzgzx/vBenNUN9
+      xz4unjrOe377gRVxdDWJKGlGgwmdrbXi5mNeRubjRJOZ3LbLYqT2GtN34USa9KJC5ItTrQiW
+      8rHHjpJeFPf1H/Zv4JZlEt0NCSA0PU4gUMGl8cvQdYxgNMPbl28ulqKrX98t3t5cvizOLRfj
+      wQRff1E/Y/KZu1roHAvz2e+f1NlPfvG3bvr4X3zyPC/25MMM3rO5ksc+ufc3c1awhJND87of
+      ifdurb7qvkOzMR57pV9n+5NDbVfd/4YEEGjq4OLxLnZ1dJCNhqhuLMMAZIHOsRAPfe+0bv+X
+      P3/PjRx21ZiLp/j+0WGd7cHd9QXyRrCSTEeSS671v7+t6ar75wSgKAqZTOYqu5nYs+ftxFhV
+      AITm5kgmk1TYJD53Z53+oNkkbT7TEns0GmVvrV1nd9uMRKNRfqvVzQZPPlq0zmcjGo3yke3l
+      3LUhn6R3U7WTaDTKQ7dV6wr5bauwkFYSS87Z4DLgMGSW2F3GDAbHUt+zaYXNAbPObpIlotEo
+      dzQ4cMt5u99pJhqN8t4OH1sC+aSsTeUOotEof7CrQhdTv73OTjQa5T/ur9OFb3f4zUgZZYkv
+      VXYwG7NL7FbSNLrlJfZkPMbOKqvObjfLRKNRDja7qbLn59yq3Fai0Sjv31rGLXX54Vpb5UL7
+      fmpvlW5Yt6vaRiIeW3LOZo+MWUstsZdZsqgmltgNaop2v1Fnl6SFe+OWWjumRfbtdQvt+Jk7
+      avXtVW6GK7RXtR2spqXtZZOu0l6JOJKmXT+/4fxYP4Pj82SUCGNzabx+J1u378Zh1DAYDJjN
+      5usdQiBYk9xQVoiBiSCt9QHm5udxuWwEQzFMRhlJRIMK1jk31AOkUilMJiPhUASny040quB2
+      u0ilkkiSJHoAwbrlhgRwNZJJIQDB1Tk7EuTvfnlRZ/u7j+6g3Ll2SvCKF2GCFWM+luKlRavQ
+      YKGyy1pCZIYTlDRCAIKSRghAUNKIZwDBu2Y8lODzPzqrs/33f7dpRc+ZyWYZndfHcQVcFuzm
+      m7ulhQBKnOWoD5BILS1Zujhr30owF01x8Ksv6mzvukrkldA0jXgsjsViQkmpmI0SqiZhs66d
+      qSzBb06p1we4rgDmxwd45UQXfp+XiXCECqeFWAoeuO/Qavh3VbrGQmQWxYdUua1UuK0F9Eiw
+      HrmuAJRIGKddZnwuibfMgdFowiFnUBQF5RqZ4Vaajz12jOCijA8P37+Rz93TWhBfBMtD90SY
+      wZl8Fo1Gv4NN1e4VPed1BVDdtpW47OKO6gDjM1HKXTKRjAmb1YpBxAIJlpEfnxpde2lRJIOR
+      1taFtOPNjgU1rqwmBYLVQ8wCrRESKZWfnhnT2Q60lVPjtRXIo9JACGCNEEqk+cIT+rn0xz+1
+      t2AC+PS3jzMTTeW2f++Wej5xW2NBfFlJriiAdDJBKivjsIkoz8X8+NQIR/ryGZarPVb+/L6N
+      BfToxvnLn5znZ2fHc9vb6zx859NXzyR3YSKiK5Bx98bC5FddaXQCyKQVpqZmicxOYCzbQEtd
+      WaH8WlYGZ2L8tx+f09n+9we33nQGiDcvB/nRyZHcdkeVa90IIJrMMBfL/6KHC5gztWsszGuL
+      qgFJEvzRgcIkDdb3ABpks1nSqoTfs/7Gnkpa5SvPdOtsD+6pQ5LQ5cYHiCpXW/8sWGlODs3z
+      5acv5LYNa0UAmWSUnp6LJDIGNu9cfy+V0mqW7xwZ1Nl2N/poCdzcu4rHX+nnrxcJyW6WOfvI
+      /cvhomCNoYsG1TQjza3N+F1WokrhushCk9Ugk9V0/wmKE10PEJ2boOfSBF6ng7VyyT/22FG6
+      FuX8//DuWv7nCr8cEZQOOgHYvQG2bfVhtzvwvDUDlEmEefP8RepqqhiZDlHlMRFOm9jSvmFV
+      HIwoGV3Iw3ovEn2zJFKqrsoMQIPfjsV49YqbghtHJwBJTdI/OIZFS9CwaS9VXhvx8CyhSJx4
+      zyBpk4oSMZFVUyQaqkkqCnb7ypawWUm6xsL86wl9FrEvPNBRIG+uzPmxEL/7joS0v/yzu2iv
+      dF3lE4KbQS8Ag4F0IkbWAGbjwuOBbHFik5JkzS4S8TR+r0QwZcdqsaz7WKDhuTjffX1IZ/sv
+      9149j+Ra4kjfDI+/OqCzfePje3LXTXBj6AQQj0Sw2J14XU6spoWGdHgD7L/nPTd94NOXg/yy
+      cyK3LQEPr7Ff1/XMREjh1xemdDb1N89wU7Lo3wNIMuWV1VR47JiMBjR+8wounWMh/uHFPp1N
+      CGDl6ZmI0D2RnzSwmmTu31JVQI/WNjoB+OubebuO4aXuizR3tK9aCaNfdk7QNx3Nbdf67Lx/
+      R80qnb14eOb8OF/7VW9uO+C0CAFcg6sGw8Xj8VWdCn3y9BhPn8vHqtzR4hcCEKw4OgGkYvMc
+      PXGWrGRgx95bRc4UQdGjE0BoegrJ6sKZjTI7H8PnEAvfb4QvPnmOEwP5Kjm3t/h55P3iZd16
+      QCcAq9OD36Hh9PowWU2F8mndMTKfoGcyX4Ctwb9+342UGjoBKNEwFzsvUNVeQ3mFp1A+FQ3/
+      cmxIVyFmR52HO9uKM65+vfKOHsDFln17cNks+MpXRgC9UxGGZvKv9m1mmf2ta6uo3nLx+KsD
+      9E3nsxz84f4NQgBrjHf0ACH6+haC4Wwe34rEmzxxcoRvvpRf+V/vs/HKFwqbY0hQuugE4PSW
+      47TNYDCZcVjyzwB95zux+OwMjoao8ZoIpYzs2ro+VkIJlo+spnF8YE5na77JtRZrDZ0AkrEQ
+      5fXteNRZRqYiNFW5iQcnOX78NJVtG9CkDKOTRrRsmoTSWNDEWILVR81q/P6jR3W29VIp/mro
+      nwHcHvpfPo43UMXe3QvRhgaTlZqactweG5OzMSp9JoJJq0iM9S74+guXyC5aZHNXe4BKkdbx
+      qvzDC5d0ZVIPtAeo8SxPe+kEYLZ72dLRwvDYNLFkGrPRjNXh4eADYjngcvK1X10kreYvqNNq
+      vGb181Ln73/dq6sU77AYqdl+5fbStKUr+IwG6aoVTXUCSCtRJqeDVNY34bGb3lUwnEBQCE4O
+      zfPgO9ZPPPund2E0SLzcq69X9onbGt/ZA3i4Zd8+JAm6O7to37JZCEBQFJwdDfK/ftals/3e
+      LfX6cJ+0kiCZWUgXombUNbMuWCBYKfSxQJPDnOqbwueys3HrthsKhjt9OciXn9HXgn30k3uX
+      00eBYMXQCcBi97BjZw0+pwWTyXxDw5+IkubMSEhnW/zAIhCsZXQ/8hang75zx/nhvx1mPp66
+      2mcEgqJBJ4BsRmFsMkhLawsmWTz+Coof3RBIzUjs23cbbp8VJZHCLbJDC4ocXQ+QCM9x4shR
+      OnsuEhZDIEEJoOsBXGVl1G1sR06F8XkXYnzioRlefPFVyqtrGJ6ap9ZjJpQ2cv+hAwVxWCBY
+      TvTvARIJZKMJm9VM4q3kuCabi6YaL6OTUXxeG1mDFbtRQ1EU4vH4FQ8qEKwX9OHQ5VUkzr+I
+      KVCLw7bwJy2TIm0u467bKhiZClPlMRFKL64SKUQgWL/oBDA3OoS/oYZLF4Ns27awIN5sd7Fj
+      x3YA/IGF/DI3V4xeIFi76IZAVpeb+cl5XPaFF1wCQbGjzwuUSOJ2+Kmo9xAKxnMp0gWCYuUd
+      FWLS9Fw4z9lz3WTFezBBCaAPhbDZcfkcbGjbTWOlSIsiKH50AlBiMWSrifMn3hDPAIKSQPcM
+      4Kms586KBoyyAVkWJXgExY+uB0jFQ/z0ySd5/eiJghZSFghWC50A7N4KOprryCRjxEUhaUEJ
+      sKQ+QGV1FdHMDB7nwoswNZWg+9IQDbUBRqejBFwykYyZptqKVXdWIFhulgjAZndgt0ZQsyog
+      k0ylcRDhuZfHcbolpg0mVDVNbZWfTEb0EoL1zZJlv11nTzM0PIKSXqjHm0mEON0/y4YKG7F4
+      CpNBJaXJkM2SzYqlj4L1zZIeIKtJ+P1lmOS3qkSWVXPfIT9ms5nNahajLKFqEiaTUQhAsO5Z
+      IoDm1lbGpsPIhoVXwbJsxG5f2M341t5iglRQLCwZAiViUUaG+piLiBVhguJHvyAmHiJrsmK2
+      eShzivpgguJHvyY4NEfn2S6q6yqZCycK5ZNAsGro1wRXNXHfe6sxSBJGswiFFhQ/OgFIkoTV
+      KvLUC0oHUQtbUNIIAQhKGiEAQUmz5EXYO9E0jdGxMTw2I/0TYSrdRiIZE21Ndavhn0CwolxX
+      ANm0wtHjJ2irqmQqnSQ8uxAM11BTQSolXpYJ1jfXHQLJZhuBMi9Op5lwNIVFVklhxCjLYtWY
+      YN1z3R4A4ODBuwFo2aa3CwEI1jviIVhQ0ggBCEoaIQBBSSMEIChphAAEJY0QgKCkEQIQlDQ3
+      LYAzbxzhhVePoa2ENwLBKnPTAlAyBuRsUghAUBTc0JvgxdRW+gimTGLsJCgKcgJQFOWGMr15
+      A7V4gWg0Sjqdptph4OFDjWSzWSSDhISEIR1nU7mZhw81oqpqLmQiGAxye4MT1yK7y2okGAzy
+      vk0+tgTMOXu1x0owGOQTeyqZ2ejN2dsqXQSDQf7zXXUk09mcfXe1DSUW5eFDjQA5e5PbgJ0U
+      Dx9qRNM0NDQMkgGXnMbklJb4mFFibK+y6uwm2UAwGOTuDS6qbHm7z2EmGAzyoa1+bqm15+wN
+      ZXaCwSCfvrWaUCKds2+ucRIMBvnzexpRs1rOvrXCgpaM5X3PqsgGmWo7mOVMvn0lCUmSsGST
+      tHiNS3yPR8LcUmvX2W1mmWAwyHvavTR7jTl7wGUhGAzy0Z0BDja7cvbmgINgMMhn76gllszk
+      7NvrHETD4SXt2+YzYlKVfPtqGgaDAb9FJWvSltwbpBNsDujvDUlauDfuaHTiWWTfVL1wrf/s
+      7gZde22rtKBeob1qHWA2Lm0vq5ak2XOF9opGQHsXKIqiJZNJTdM0LZvNatlsVtM0TYtEIrl/
+      v/3/t+1vs5L2xb5kMhktHo8vsScSCS2dTl/R9xs5p6qqK+57KpXSEonEEnssFsudfznb8Z3f
+      Sc1ktFQ6rWWvcRxVVbVoNLrEx+vdG2omrc3OzmpKKr0q7ZXJZK54DPmRRx555DftPgwGAwaD
+      gZH+HhRN5sTRN6jf0IhJlnPqkySJsZFRHG43RlnGYDDQffYEvYMjjE0GqaupQJZlDGR56fnn
+      KauqY+TyZcp8vgW7wUAyHubUiWPEJQd+j2NBwdkUzz39FGc7uwnUt2I3L0SnhmenSGLBZl7o
+      3CRJQpZl4vPjzCZNzIwP4/b4cr4M9Q8QjESZm5zCVe7H/Jb97c++0/fRgR5eeP555lImGqrL
+      3/Jd5eirL9PVfZGMbKfc58r5jqYRmp0krGg4bBZkWUZTk7z20kv09A9TWduA2WjI7S9JEpH5
+      GZKaCZvFhCzLTF2+xEuvHuHN8310bG7Lte9wXy9Dg70c7xykvaUx377nz2B1+7GYFn7p5EXf
+      KRkPMzYTwuNyLtgljd7O0/z6hZeRXQEC3gW7pCn88unnGB7qx+CqxOdc8D06N0nvwAQmOclM
+      RMPjtGA0GglNXebl147RNzBKbUM9ZuPC9Ri51MnhHz/Br452s+/WHTnfL5w+Tv/wOP2XJ2hu
+      qs/73tVFf88Z4rIPv9uGLMukYnPMxjSc9nyiBlmWScfmmAhliMyOYXZ6cueMzY/z0qtHGZkO
+      01Rfnfv+g7lrPYm73I9Jlt/dUP5tAdhtZh772t8SlewY3nJOkiR6zhzn8OHDvHDkFFny0aMT
+      U3NcvnQRp8+X+zJoKhabjRee+QkXh6fydjXBtx/9R052j1FTmd9fTUZwBFq4fXsj49PRnD0R
+      nuKpnzzJ4Z88xVw0iSRJGAwGJkfHUVIJpsbHSarZ3M02PXKJZ555mldOnEVb5GPXqSMcPnyY
+      l4+fzfsCTIxeZno2hM1u1dmVWISZ2SDJVCZvz8T4zqPf5Ic/ex6LzZKzx+fHSeCgwi3RPzKf
+      s4emhnny8GF++vNniSYzOd9lg8SF82fRTFakt9pdkiQyySjjEY3aMofOd48VvvWtb3H0za68
+      Xcvyiye+z6OP/wDNbFvU7lmGhkcIhWNYreacXUuFGZkMEo3MMzUTzt90Spjnn3uWn//i18TT
+      2ZyPkbkJjp04xdTsPNm3hkGSJJGMh+jqvUxdTVXuGJIkQRaMJiOalr+hARKhKVSrH9Mi8aYT
+      IZ7+6U84fPhJxudiOfv81BTheIzg7BShWCrny2DvIIHaWqJTEyiL2mtyqIdnnnmaI6c6c+1y
+      0w/BV8JkdfLh3/8Yk1MhVPJTS+3b9uLy+RmciOiUtnFjO/5AgGgoCNQuGA1mdu3ayaDbyrSy
+      KDOFbOPjD32WqeGLDF6eZktLNQBGux+PeZD+KY29+7y53T3+Ku68uxZbNobNYsrZmzo6+PEP
+      f4R3ww5sxnwYd9umzYTTEu6KBhYngvFVN3OwaRNlZT7dd21s3467rIx5RVlklfB67IwENZx2
+      ve/33Hs3b5w6zejEPJ4NCxWWzTYX4ekTzE9L3Nliy+1ukI04HA7sLh9uW973ZFKhfkMrZBTd
+      7JvR4uD23a10dXbr7BPzST7zxw8xNzOzyEWJ/Yfux3ziDQb7+mks37lg1zJMTUxidzqYnJxj
+      Q1XZwu6yFTUZJkUFlX5X7jBmixWzxYjN5qbMnU+eVl7Xyo6NvQzPRRZu8LfIZjVa29txWPPf
+      ByAenef0+SHatu5BA97+xNz0BCPhMSqqGxa1i0w4OIfTadMdo6y6ltO/fgHsAdoc+atXWVvJ
+      qc5LmJxu3Q1e09BAJGMga3Ln0nsuy2TO3MQwJ04eJ5Qy6PKGnnrpKb7/b4cxuwIsLjrZf+EM
+      x944jdnhzhs1lSf/+Vs8+ewJtm3fmLdnIpy/MER9Qx1KIp+sKx2fJimXs7PFS/fQXM4eC8+T
+      SGeIh6eZCeVv0sHubjbffg+WVIh4Rs37cmmA2g0tzI+PsLgmTtfJ1/jBD37A86+d1N1cfX0D
+      GC1ukrFg3igZaNq4i/vvvYNK/6LvlE0xNj5DoKoWjzMvDJPNw/4DBzhw4E78rvxN5Cyr5tC9
+      93LvPXfhsOQvnb+qkQMHDnDg9r26C2Y2ZPj7v/0qaYtbZ7fJKb73nX9i7K1fy4X2hYSSomXj
+      ZuTsom9qsLBt20ZGhoex2hfdYEYn2zoaGegbQFt08eyeClrq/PT1D+tu9FhoDiweOlobdde6
+      pqkNp0FhZHJOZ2/ZuBmrpDAbirKYji3bCE2NkFHz18jmqWbHxlr6+gfAkP+mmUyaydFBOrt7
+      SS26pkaTib7ON+m7PKU7tpTN8ObJk2QNeTH+f9ZCcEefX767AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
